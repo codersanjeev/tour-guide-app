@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Karnal Tour Guide</string>
+    <string name="about_karnal">Karnal city is said to be founded by Karna, the King of Kauravas. Karnal is considered as the chief centre of agricultural and dairy research with its famous and prominent research institutes such as National Dairy Research Institute, Indian Agricultural Research Institute and National Bureau of Animal Genetics Research. Karnal is situated on the western bank of River Yamuna.</string>
+    <string name="button_text">LOCATE ON MAP</string>
+    <string name="list_item_pic_desc">Contains list item picture</string>
+</resources>
