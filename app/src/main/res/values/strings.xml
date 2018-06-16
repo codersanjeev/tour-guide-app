@@ -3,4 +3,24 @@
     <string name="about_karnal">Karnal city is said to be founded by Karna, the King of Kauravas. Karnal is considered as the chief centre of agricultural and dairy research with its famous and prominent research institutes such as National Dairy Research Institute, Indian Agricultural Research Institute and National Bureau of Animal Genetics Research. Karnal is situated on the western bank of River Yamuna.</string>
     <string name="button_text">LOCATE ON MAP</string>
     <string name="list_item_pic_desc">Contains list item picture</string>
+    <string name="karnal_busstand_info">Bus Stand - Easily Accessible</string>
+    <string name="karnal_rail_info">Karnal Railway Station located on Delhi-Kalka line</string>
+    <string name="airport_info">Nearest Airport in Chandigarh</string>
+    <string name="hotel1">Noor Mahal</string>
+    <string name="hotel2">Leela Grande Hotel</string>
+    <string name="hotel3">Hotel Jewels</string>
+    <string name="hotel4">Hotel Prem Plaza</string>
+    <string name="hotel5">Deventure Hotel</string>
+    <string name="title1">Places</string>
+    <string name="title2">Restaurants</string>
+    <string name="title3">Hotels</string>
+    <string name="title4">About</string>
+    <string name="place1">Karna Lake</string>
+    <string name="place2">Kalander Shah Tomb</string>
+    <string name="place3">Pukka Pul</string>
+    <string name="place4">Cantonment Church Tower</string>
+    <string name="restaurant1">Karnal Haveli</string>
+    <string name="restaurant2">Neelkanth Star Dhabha</string>
+    <string name="restaurant3">Daana Paani</string>
+    <string name="restaurant4">KFC Karnal</string>
 </resources>

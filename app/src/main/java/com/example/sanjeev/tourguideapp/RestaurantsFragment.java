@@ -27,10 +27,10 @@ public class RestaurantsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_view, container, false);
 
         final ArrayList<ListItem> listItems = new ArrayList<>();
-        listItems.add(new ListItem(R.drawable.karnalhaveli, "Karnal Haveli"));
-        listItems.add(new ListItem(R.drawable.neelkanthstardhaba, "Neelkanth Star Dhabha"));
-        listItems.add(new ListItem(R.drawable.chddaanapaani, "Daana Paani"));
-        listItems.add(new ListItem(R.drawable.kfckarnal, "KFC Karnal"));
+        listItems.add(new ListItem(R.drawable.karnalhaveli, getString(R.string.restaurant1)));
+        listItems.add(new ListItem(R.drawable.neelkanthstardhaba, getString(R.string.restaurant2)));
+        listItems.add(new ListItem(R.drawable.chddaanapaani, getString(R.string.restaurant3)));
+        listItems.add(new ListItem(R.drawable.kfckarnal, getString(R.string.restaurant4)));
 
         CustomAdapter adapter = new CustomAdapter(getActivity(), listItems);
         ListView listView = rootView.findViewById(R.id.listView);

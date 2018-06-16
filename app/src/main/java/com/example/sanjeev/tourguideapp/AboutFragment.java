@@ -1,18 +1,15 @@
 package com.example.sanjeev.tourguideapp;
 
-import android.content.Intent;
-import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListView;
 
-// This Fragment displays about the location Karnal
-// gives a brief overview about the location
+import java.util.ArrayList;
+
 public class AboutFragment extends Fragment {
 
     public AboutFragment() {
@@ -25,21 +22,18 @@ public class AboutFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.about_layout, container, false);
-        // Location Button
-        // will redirect the user to Google Maps
-        // location = Karnal
-        // latitude = 29.6857
-        // longitude = 76.9905
-        Button locationButton = rootView.findViewById(R.id.location_button);
-        locationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String uri = "http://maps.google.com/maps?q=loc:" + 29.6857 + "," + 76.9905 + " (karnal)";
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(intent);
-            }
-        });
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
+
+        final ArrayList<ListItem> listItems = new ArrayList<>();
+        listItems.add(new ListItem(R.drawable.karnalinfo, getString(R.string.karnal_rail_info)));
+        listItems.add(new ListItem(R.drawable.busstand, getString(R.string.karnal_busstand_info)));
+        listItems.add(new ListItem(R.drawable.airport, getString(R.string.airport_info)));
+
+        CustomAdapter adapter = new CustomAdapter(getActivity(), listItems);
+        ListView listView = rootView.findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+
+
         return rootView;
     }
 

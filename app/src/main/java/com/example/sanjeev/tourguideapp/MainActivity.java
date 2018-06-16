@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new PlacesFragment(), "Places");
-        adapter.addFragment(new RestaurantsFragment(), "Restaurants");
-        adapter.addFragment(new HotelsFragment(), "Hotels");
-        adapter.addFragment(new AboutFragment(), "About");
+        adapter.addFragment(new PlacesFragment(), getString(R.string.title1));
+        adapter.addFragment(new RestaurantsFragment(), getString(R.string.title2));
+        adapter.addFragment(new HotelsFragment(), getString(R.string.title3));
+        adapter.addFragment(new AboutFragment(), getString(R.string.title4));
         viewPager.setAdapter(adapter);
     }
 

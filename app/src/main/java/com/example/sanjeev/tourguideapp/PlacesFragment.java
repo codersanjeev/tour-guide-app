@@ -28,10 +28,10 @@ public class PlacesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_view, container, false);
 
         final ArrayList<ListItem> listItems = new ArrayList<>();
-        listItems.add(new ListItem(R.drawable.karnalake, "Karna Lake"));
-        listItems.add(new ListItem(R.drawable.kalandershahtomb, "Kalander Shah Tomb"));
-        listItems.add(new ListItem(R.drawable.pukkapul, "Pukka Pul"));
-        listItems.add(new ListItem(R.drawable.cantonmentchurchtower, "Cantonment Church Tower"));
+        listItems.add(new ListItem(R.drawable.karnalake, getString(R.string.place1)));
+        listItems.add(new ListItem(R.drawable.kalandershahtomb, getString(R.string.place2)));
+        listItems.add(new ListItem(R.drawable.pukkapul, getString(R.string.place3)));
+        listItems.add(new ListItem(R.drawable.cantonmentchurchtower, getString(R.string.place4)));
 
         CustomAdapter adapter = new CustomAdapter(getActivity(), listItems);
         ListView listView = rootView.findViewById(R.id.listView);

@@ -25,11 +25,11 @@ public class HotelsFragment extends Fragment {
 
         final ArrayList<ListItem> listItems = new ArrayList<>();
 
-        listItems.add(new ListItem(R.drawable.noormahal, "Noor Mahal"));
-        listItems.add(new ListItem(R.drawable.leelagrandhotel, "Leela Grande Hotel"));
-        listItems.add(new ListItem(R.drawable.hoteljewels, "Hotel Jewels"));
-        listItems.add(new ListItem(R.drawable.hotelpremplaza, "Hotel Prem Plaza"));
-        listItems.add(new ListItem(R.drawable.deventurehotel, "Deventure Hotel"));
+        listItems.add(new ListItem(R.drawable.noormahal, getString(R.string.hotel1)));
+        listItems.add(new ListItem(R.drawable.leelagrandhotel, getString(R.string.hotel2)));
+        listItems.add(new ListItem(R.drawable.hoteljewels, getString(R.string.hotel3)));
+        listItems.add(new ListItem(R.drawable.hotelpremplaza, getString(R.string.hotel4)));
+        listItems.add(new ListItem(R.drawable.deventurehotel, getString(R.string.hotel5)));
 
         CustomAdapter adapter = new CustomAdapter(getActivity(), listItems);
         ListView listView = rootView.findViewById(R.id.listView);
