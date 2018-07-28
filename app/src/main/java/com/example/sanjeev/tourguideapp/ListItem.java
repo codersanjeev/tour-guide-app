@@ -1,24 +1,34 @@
 package com.example.sanjeev.tourguideapp;
 
-// Represents each list item in the list
-// contains title and image resource ID
-public class ListItem {
+import java.io.Serializable;
 
-    private int mImageResourceId;
-    private String mTitle;
+public class ListItem implements Serializable {
+    private String name;
+    private int imageID;
 
-    ListItem(int mImageRecourseId, String mTitle) {
-        this.mImageResourceId = mImageRecourseId;
-        this.mTitle = mTitle;
+    public ListItem(){
+
     }
 
-    public int getImageResourceId() {
-
-        return mImageResourceId;
+    public ListItem(String name, int imageID) {
+        this.name = name;
+        this.imageID = imageID;
     }
 
-    public String getTitle() {
-        return mTitle;
+    public String getName() {
+
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getImageID() {
+        return imageID;
+    }
+
+    public void setImageID(int imageID) {
+        this.imageID = imageID;
+    }
 }

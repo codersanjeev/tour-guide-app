@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/places"
+            android:title="Places"/>
+        <item android:id="@+id/restaurants"
+            android:title="Restaurants"/>
+        <item android:id="@+id/hotels"
+            android:title="Hotels"/>
+        <item android:id="@+id/about"
+            android:title="About"/>
+    </group>
+</menu>

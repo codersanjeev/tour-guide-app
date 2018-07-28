@@ -3,14 +3,20 @@ package com.example.sanjeev.tourguideapp;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AboutFragment extends Fragment {
+
+    private MyAdapter adapter;
+    private List<ListItem> list;
 
     public AboutFragment() {
     }
@@ -22,19 +28,30 @@ public class AboutFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.list_view, container, false);
 
-        final ArrayList<ListItem> listItems = new ArrayList<>();
-        listItems.add(new ListItem(R.drawable.karnalinfo, getString(R.string.karnal_rail_info)));
-        listItems.add(new ListItem(R.drawable.busstand, getString(R.string.karnal_busstand_info)));
-        listItems.add(new ListItem(R.drawable.airport, getString(R.string.airport_info)));
+        RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
+        list = new ArrayList<>();
+        adapter = new MyAdapter(getActivity(), list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
 
-        CustomAdapter adapter = new CustomAdapter(getActivity(), listItems);
-        ListView listView = rootView.findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-
+        prepareList();
 
         return rootView;
+    }
+
+    private void prepareList() {
+        int[] images = {R.drawable.airport,
+        R.drawable.busstand, R.drawable.karnalinfo};
+
+        list.add(new ListItem("Airport", images[0]));
+        list.add(new ListItem("Bus Stand", images[1]));
+        list.add(new ListItem("Railway Station", images[2]));
+
+        adapter.notifyDataSetChanged();
     }
 
 }
