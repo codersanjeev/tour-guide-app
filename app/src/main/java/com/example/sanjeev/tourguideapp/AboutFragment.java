@@ -47,9 +47,9 @@ public class AboutFragment extends Fragment {
         int[] images = {R.drawable.airport,
         R.drawable.busstand, R.drawable.karnalinfo};
 
-        list.add(new ListItem("Airport", images[0]));
-        list.add(new ListItem("Bus Stand", images[1]));
-        list.add(new ListItem("Railway Station", images[2]));
+        list.add(new ListItem("Airport", images[0], "Karnal Airport, (ICAO: VI40), the home of Karnal Aviation Club. Karnal Flying Club is an airstrip situated about 3 km east of Karnal in the state of Haryana, India. It is being used for General Aviation and Pilot Training. There are no scheduled commercial flight operations.", "geo:29.7155928,77.0305085"));
+        list.add(new ListItem("Bus Stand", images[1], "Located in the middle of the city. One can easily find buses to Delhi or Chandigarh from here.", "geo:29.6907726,76.9845811"));
+        list.add(new ListItem("Railway Station", images[2], "Karnal railway station is a station on the Delhi-Kalka line. It is located in the Indian state of Haryana. It serves Karnal and surrounding area. It is located at an altitude of 253 metres (830 ft) above mean sea level. It was allotted the railway code of KUN under the jurisdiction of Delhi railway division.", "geo:29.694786,76.9674866"));
 
         adapter.notifyDataSetChanged();
     }

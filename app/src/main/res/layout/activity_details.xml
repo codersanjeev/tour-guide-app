@@ -37,13 +37,21 @@
             android:orientation="vertical"
             android:layout_height="match_parent">
             <TextView
-                android:textSize="24sp"
-                android:id="@+id/place_title"
-                android:layout_width="match_parent"
+                android:id="@+id/details"
+                android:textSize="16sp"
+                android:text="Description Will Be Shown Here"
                 android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/locate_button"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Other Details Will Be Shown Here"/>
-
+                android:text="Locate On Map"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
